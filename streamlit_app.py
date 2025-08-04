@@ -9,9 +9,7 @@ import datetime
 from sklearn.preprocessing import LabelEncoder
 
 ## Load the trained model
-MODEL_DIR = os.path.expanduser("~/Downloads")
-model = pickle.load(open(os.path.join(MODEL_DIR, "hypertension_xgb_model.sav"), 'rb'))
-
+model = pickle.load(open("hypertension_xgb_model.sav", 'rb'))
 ## Visitor counter
 counter_file = "heart_visitors.pkl"
 
