@@ -46,6 +46,7 @@ interactive tool.
 ## 📂 Project Structure
 
 Hypertension-Prediction-App/
+
 │── data/ # Dataset (not included for privacy)
 
 │── notebooks/ # Jupyter notebooks for EDA & model training
@@ -59,6 +60,7 @@ Hypertension-Prediction-App/
 │── README.md # Documentation
 
 │── assets/ # Images/screenshots for README
+
 ------------------------------------------------------------------------
 
 ## ⚙️ Installation & Setup
