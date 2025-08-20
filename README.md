@@ -1,155 +1,121 @@
-# ❤️ Heart Disease Prediction Project
+# 🩺 Hypertension Prediction Project
 
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Health%20Analytics-blue)
-![Python](https://img.shields.io/badge/Python-3.9+-yellow)
-![License](https://img.shields.io/badge/License-MIT-green)
-
----
-
-## 📌 Project Overview
-
-Heart disease remains one of the leading causes of morbidity and mortality worldwide. Early detection is crucial in reducing risks and improving patient outcomes. This project applies **machine learning techniques** to predict the likelihood of heart disease based on patient characteristics and clinical data.
-
-The study compares multiple models — **Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and Support Vector Machine (SVM)** — and selects the best-performing one to create a **clinician-friendly prediction scoring tool**.
+This project applies **Data Science** and **Machine Learning** techniques to predict **Hypertension status** based on patient lifestyle, clinical, and demographic information.  
+The workflow covers **data preprocessing, exploratory data analysis (EDA), feature engineering, model building, hyperparameter tuning, and evaluation** using multiple machine learning algorithms.
 
 ---
 
-## 🎯 Study Objectives
-
-### **General Objective**
-
-* To develop and evaluate predictive models for heart disease and determine the most effective model for accurate early detection and clinical decision-making.
-
-### **Specific Objectives**
-
-1. To identify and describe the socio-demographic and clinical risk factors associated with heart disease in the study population.
-2. To build predictive models for heart disease using Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and Support Vector Machine (SVM).
-3. To evaluate and compare the performance of the models using **accuracy, sensitivity, specificity, precision, F1-score, and ROC-AUC**.
-4. To select the best-performing model for heart disease prediction and develop a **scoring system/tool** for clinicians to facilitate timely diagnosis and intervention.
-5. To provide recommendations on how predictive analytics can be integrated into healthcare systems for early identification and management of heart disease.
-
----
-
-## ❓ Research Questions
-
-1. What socio-demographic and clinical risk factors are significantly associated with heart disease?
-2. How do different machine learning models (Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and SVM) perform in predicting heart disease?
-3. Which model demonstrates the best predictive performance based on accuracy, sensitivity, specificity, F1-score, and ROC-AUC?
-4. Can the best-performing model be developed into a scoring system/tool for clinical use?
+## 📌 Table of Contents
+1. [Overview](#-overview)
+2. [Dataset](#-dataset)
+3. [Project Workflow](#-project-workflow)
+   - [1. Data Loading & Cleaning](#1-data-loading--cleaning)
+   - [2. Exploratory Data Analysis (EDA)](#2-exploratory-data-analysis-eda)
+   - [3. Feature Engineering](#3-feature-engineering)
+   - [4. Model Training](#4-model-training)
+   - [5. Model Evaluation](#5-model-evaluation)
+4. [Machine Learning Models](#-machine-learning-models)
+5. [Results](#-results)
+6. [Dependencies](#-dependencies)
+7. [How to Run](#-how-to-run)
+8. [Future Improvements](#-future-improvements)
 
 ---
 
-## 🔬 Hypotheses
-
-* **Null Hypothesis (H₀):** There is no significant difference in predictive performance among the machine learning models used to predict heart disease.
-* **Alternative Hypothesis (H₁):** There is a significant difference in predictive performance among the machine learning models, and one model outperforms the others in predicting heart disease.
-
----
-
-## 📊 Dataset
-
-* **Source:** [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease) (or Kaggle equivalent)
-* **Features:** Age, sex, chest pain type, blood pressure, cholesterol, fasting blood sugar, resting ECG, maximum heart rate, exercise-induced angina, ST depression, slope of ST segment, number of major vessels, thalassemia.
-* **Target:** Presence or absence of heart disease (binary outcome).
+## 🚀 Overview
+Hypertension is one of the leading risk factors for cardiovascular diseases. Early prediction of hypertension risk helps clinicians and patients take preventive measures.  
+This project builds multiple **classification models** to detect hypertension from patient data and compares their performance.
 
 ---
 
-## ⚙️ Methodology
+## 📂 Dataset
+- **File:** `hypertension_dataset.csv`
+- **Shape:** Rows × Columns *(after cleaning)*
+- **Target Variable:** `has_hypertension` (1 = Yes, 0 = No)
 
-### 1. **Data Preprocessing**
-
-* Handling missing values
-* Encoding categorical variables
-* Feature scaling/normalization
-* Train-test split
-
-### 2. **Model Development**
-
-* Logistic Regression
-* Decision Tree
-* Random Forest
-* Naive Bayes
-* Support Vector Machine (SVM)
-
-### 3. **Model Evaluation**
-
-* Confusion Matrix
-* Accuracy, Sensitivity (Recall), Specificity, Precision
-* F1-Score
-* ROC Curve and AUC
-
-### 4. **Model Selection**
-
-* Compare results across models
-* Select best-performing model
-* Develop clinical scoring tool
+### Example Features
+- **Numerical:** age, bmi, cholesterol, blood_sugar, etc.  
+- **Categorical:** bp_history, medication, family_history, exercise_level, smoking_status  
 
 ---
 
-## 📈 Results (Illustrative Example)
+## 🛠 Project Workflow
 
-| Model               | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
-| ------------------- | -------- | --------- | ------ | -------- | ------- |
-| Logistic Regression | 85.7%    | 0.83      | 0.87   | 0.85     | 0.90    |
-| Decision Tree       | 78.9%    | 0.76      | 0.80   | 0.78     | 0.81    |
-| Random Forest       | 84.2%    | 0.82      | 0.85   | 0.83     | 0.88    |
-| Naive Bayes         | 79.4%    | 0.77      | 0.79   | 0.78     | 0.82    |
-| SVM                 | 83.5%    | 0.81      | 0.84   | 0.82     | 0.87    |
+### 1. Data Loading & Cleaning
+- Loaded CSV using `pandas` and cleaned column names (`pyjanitor`).
+- Checked data types, missing values, and duplicates.
+- Dropped missing values and standardized data types.
 
-👉 **Logistic Regression** showed the best predictive performance.
+### 2. Exploratory Data Analysis (EDA)
+- **Univariate Analysis:** Histograms, KDE plots, boxplots.  
+- **Categorical Distribution:** Count plots for smoking status, exercise level, etc.  
+- **Bivariate Analysis:** Boxplots of features vs hypertension.  
+- **Correlation Analysis:** Heatmap for numerical variables.  
+- **Chi-square Tests:** Relationship between categorical features and target.
+
+### 3. Feature Engineering
+- Label encoding for categorical variables.  
+- Split dataset into **training (80%)** and **testing (20%)** sets with stratification.  
+- Applied **MinMax Scaling** for numerical features.  
+
+### 4. Model Training
+Implemented and tuned the following models:
+- Logistic Regression  
+- Decision Tree  
+- Random Forest  
+- Support Vector Machines (SVM)  
+- XGBoost  
+- K Nearest Neighbors (KNN)  
+- Gradient Boosting Machines (GBM)  
+- AdaBoost  
+- Ensemble Models: Voting Classifier & Stacking Classifier  
+- Stochastic Gradient Descent (SGD)
+
+### 5. Model Evaluation
+Each model was evaluated using:
+- **Accuracy**
+- **Precision**
+- **Recall**
+- **F1-Score**
+- **Confusion Matrix**
+- **ROC Curve / AUC (where applicable)**
 
 ---
 
-## 🏥 Clinical Implications
+## 🤖 Machine Learning Models
 
-* The logistic regression model was developed into a **risk scoring system**.
-* Clinicians can input patient data to obtain a risk score.
-* Supports early intervention and personalized treatment strategies.
+| Algorithm | Description | Strengths |
+|-----------|-------------|-----------|
+| Logistic Regression | Baseline linear classifier | Simple, interpretable |
+| Decision Tree | Tree-based split model | Easy visualization |
+| Random Forest | Ensemble of decision trees | Reduces overfitting, robust |
+| Support Vector Machine | Maximizes margin between classes | Good with high-dimensional data |
+| XGBoost | Gradient boosting algorithm | High performance, handles imbalance |
+| KNN | Distance-based classifier | Non-parametric, simple |
+| Gradient Boosting | Sequential boosting | Effective with weak learners |
+| AdaBoost | Adaptive boosting of decision stumps | Focuses on hard-to-classify cases |
+| Voting Classifier | Soft-voting ensemble | Combines multiple learners |
+| Stacking Classifier | Meta-learning approach | Boosts performance |
+| SGD Classifier | Linear model with stochastic optimization | Efficient on large datasets |
 
 ---
 
-## 💻 Tools & Libraries
+## 📊 Results
 
-* **Programming Language:** Python
-* **Libraries:** pandas, numpy, scikit-learn, matplotlib, seaborn
+- **Best Performing Models:**  
+   - XGBoost  
+   - Random Forest  
+   - Gradient Boosting  
+   - Stacking Classifier  
+
+- **Metrics:**  
+   - F1-Macro Score was emphasized due to possible class imbalance.  
+   - Confusion matrices and ROC curves highlighted strengths in sensitivity (recall) vs precision trade-offs.
 
 ---
 
-## 🚀 How to Run the Project
+## 📦 Dependencies
+Install the following Python libraries before running:
 
 ```bash
-# Clone the repository
-git clone https://github.com/username/heart-disease-prediction.git
-cd heart-disease-prediction
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the notebook
-jupyter notebook Heart_Disease_Prediction.ipynb
-```
-
----
-
-## 📚 References
-
-1. UCI Machine Learning Repository: Heart Disease Dataset
-2. WHO. Cardiovascular diseases (CVDs). World Health Organization.
-3. Kuhn, M., & Johnson, K. (2013). *Applied Predictive Modeling*. Springer.
-
----
-
-## 📌 Author
-
-👤 **Enoch Bereka**
-📧 [Email](mailto:enochosenwafulah@gmail.com) | 🌐 [LinkedIn](https://www.linkedin.com/in/enock-bereka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) | 🐦 [Twitter](https://x.com/biostician)
-
----
-
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-✨ *If you find this useful, give it a ⭐ on GitHub!*
+pip install pandas numpy matplotlib seaborn scikit-learn xgboost pyjanitor
