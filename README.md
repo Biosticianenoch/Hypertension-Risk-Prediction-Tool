@@ -1,170 +1,155 @@
-# 🩺 Hypertension Risk Prediction App  
-**Empowering prevention through prediction.**  
+# ❤️ Heart Disease Prediction Project
 
-[![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-blue?logo=streamlit)](https://streamlit.io)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
-[![Made with ❤️ in Africa](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20in%20Africa-red)](https://github.com/enockbereka)  
-
----
-
-![Banner](https://img.freepik.com/premium-vector/hypertension-banner-design-high-blood-pressure-medical-illustration_625536-94.jpg)
-
-> 🚀 **Live App**: [Launch Here](https://your-streamlit-app-link)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Health%20Analytics-blue)
+![Python](https://img.shields.io/badge/Python-3.9+-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 💡 Overview
+## 📌 Project Overview
 
-The **Hypertension Risk Prediction App** is a powerful machine learning-powered web app that enables users to evaluate their risk of developing high blood pressure based on clinical and lifestyle data. Built using Python and Streamlit, the tool offers a seamless, intuitive interface for both public users and health professionals.
+Heart disease remains one of the leading causes of morbidity and mortality worldwide. Early detection is crucial in reducing risks and improving patient outcomes. This project applies **machine learning techniques** to predict the likelihood of heart disease based on patient characteristics and clinical data.
 
----
-
-## ✨ Key Features
-
-✅ **Predict Hypertension Risk** using a trained ML model (XGBoost)  
-📊 **Real-time analysis** with personalized feedback  
-💡 **Intelligent Recommendations** based on predicted risk level  
-📈 **Visitor analytics dashboard**  
-🔐 **Privacy-focused**: No data stored or shared  
-🧾 **Data citation for research use**  
-📱 **Mobile-friendly and responsive design**
+The study compares multiple models — **Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and Support Vector Machine (SVM)** — and selects the best-performing one to create a **clinician-friendly prediction scoring tool**.
 
 ---
 
-## 🧠 How It Works
+## 🎯 Study Objectives
 
-1. Users input data such as age, BMI, BP, cholesterol, and lifestyle habits.
-2. The model processes the data using a trained classifier.
-3. Results are displayed instantly along with tailored lifestyle advice.
-4. Data and usage logs (non-personal) are aggregated for analytics.
+### **General Objective**
 
----
+* To develop and evaluate predictive models for heart disease and determine the most effective model for accurate early detection and clinical decision-making.
 
-## 🧪 Model Info
+### **Specific Objectives**
 
-- Algorithm: **XGBoost Classifier**
-- Framework: `scikit-learn`, `numpy`, `streamlit`
-- Input Features:
-  - Age
-  - BMI
-  - Systolic & Diastolic BP
-  - Cholesterol
-  - Smoking Status
-  - Exercise Level
-  - Medication
-  - Family History
-
-> ⚠️ Note: The model was trained on anonymized clinical data and is **not a substitute for medical advice**.
+1. To identify and describe the socio-demographic and clinical risk factors associated with heart disease in the study population.
+2. To build predictive models for heart disease using Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and Support Vector Machine (SVM).
+3. To evaluate and compare the performance of the models using **accuracy, sensitivity, specificity, precision, F1-score, and ROC-AUC**.
+4. To select the best-performing model for heart disease prediction and develop a **scoring system/tool** for clinicians to facilitate timely diagnosis and intervention.
+5. To provide recommendations on how predictive analytics can be integrated into healthcare systems for early identification and management of heart disease.
 
 ---
 
-## 🖥️ Screenshots
+## ❓ Research Questions
 
-| 📥 Prediction Form | 📊 Output Risk & Advice | 📚 Data Citation Page |
-|-------------------|------------------------|------------------------|
-| ![](https://i.imgur.com/HEwzpPc.png) | ![](https://i.imgur.com/MDr06Vq.png) | ![](https://i.imgur.com/n8gZgPq.png) |
-
----
-
-## 📚 Dataset & Citation
-
-This app uses the following dataset:
-
-**Mia D. (2023)** – *Hypertension Risk Prediction Dataset*  
-🔗 [View on Kaggle](https://www.kaggle.com/datasets/miadul/hypertension-risk-prediction-dataset)
-
-```bibtex
-@dataset{mia2023hypertension,
-  author = {Mia D.},
-  title = {Hypertension Risk Prediction Dataset},
-  year = {2023},
-  url = {https://www.kaggle.com/datasets/miadul/hypertension-risk-prediction-dataset}
-}
-```
+1. What socio-demographic and clinical risk factors are significantly associated with heart disease?
+2. How do different machine learning models (Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and SVM) perform in predicting heart disease?
+3. Which model demonstrates the best predictive performance based on accuracy, sensitivity, specificity, F1-score, and ROC-AUC?
+4. Can the best-performing model be developed into a scoring system/tool for clinical use?
 
 ---
 
-## 📦 Installation & Setup
+## 🔬 Hypotheses
 
-1. **Clone the repository**  
+* **Null Hypothesis (H₀):** There is no significant difference in predictive performance among the machine learning models used to predict heart disease.
+* **Alternative Hypothesis (H₁):** There is a significant difference in predictive performance among the machine learning models, and one model outperforms the others in predicting heart disease.
+
+---
+
+## 📊 Dataset
+
+* **Source:** [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/heart+disease) (or Kaggle equivalent)
+* **Features:** Age, sex, chest pain type, blood pressure, cholesterol, fasting blood sugar, resting ECG, maximum heart rate, exercise-induced angina, ST depression, slope of ST segment, number of major vessels, thalassemia.
+* **Target:** Presence or absence of heart disease (binary outcome).
+
+---
+
+## ⚙️ Methodology
+
+### 1. **Data Preprocessing**
+
+* Handling missing values
+* Encoding categorical variables
+* Feature scaling/normalization
+* Train-test split
+
+### 2. **Model Development**
+
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* Naive Bayes
+* Support Vector Machine (SVM)
+
+### 3. **Model Evaluation**
+
+* Confusion Matrix
+* Accuracy, Sensitivity (Recall), Specificity, Precision
+* F1-Score
+* ROC Curve and AUC
+
+### 4. **Model Selection**
+
+* Compare results across models
+* Select best-performing model
+* Develop clinical scoring tool
+
+---
+
+## 📈 Results (Illustrative Example)
+
+| Model               | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| ------------------- | -------- | --------- | ------ | -------- | ------- |
+| Logistic Regression | 85.7%    | 0.83      | 0.87   | 0.85     | 0.90    |
+| Decision Tree       | 78.9%    | 0.76      | 0.80   | 0.78     | 0.81    |
+| Random Forest       | 84.2%    | 0.82      | 0.85   | 0.83     | 0.88    |
+| Naive Bayes         | 79.4%    | 0.77      | 0.79   | 0.78     | 0.82    |
+| SVM                 | 83.5%    | 0.81      | 0.84   | 0.82     | 0.87    |
+
+👉 **Logistic Regression** showed the best predictive performance.
+
+---
+
+## 🏥 Clinical Implications
+
+* The logistic regression model was developed into a **risk scoring system**.
+* Clinicians can input patient data to obtain a risk score.
+* Supports early intervention and personalized treatment strategies.
+
+---
+
+## 💻 Tools & Libraries
+
+* **Programming Language:** Python
+* **Libraries:** pandas, numpy, scikit-learn, matplotlib, seaborn
+
+---
+
+## 🚀 How to Run the Project
+
 ```bash
-git clone https://github.com/your-username/hypertension-app.git
-cd hypertension-app
-```
+# Clone the repository
+git clone https://github.com/username/heart-disease-prediction.git
+cd heart-disease-prediction
 
-2. **Install dependencies**  
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Run the notebook
+jupyter notebook Heart_Disease_Prediction.ipynb
 ```
 
-3. **Run the application**  
-```bash
-streamlit run streamlit_app.py
-```
+---
 
-> 🛠 Don’t forget to place `hypertension_xgb_model.sav` in the app root directory.
+## 📚 References
+
+1. UCI Machine Learning Repository: Heart Disease Dataset
+2. WHO. Cardiovascular diseases (CVDs). World Health Organization.
+3. Kuhn, M., & Johnson, K. (2013). *Applied Predictive Modeling*. Springer.
 
 ---
 
-## 🧰 Technologies Used
+## 📌 Author
 
-| Category        | Tech Stack |
-|----------------|------------|
-| Frontend       | Streamlit, HTML, CSS |
-| Backend        | Python, XGBoost, Scikit-learn |
-| Data Handling  | NumPy, Pickle |
-| Visualization  | Streamlit Components |
-| Hosting        | Streamlit Cloud |
+👤 **Enoch Bereka**
+📧 [Email](mailto:youremail@example.com) | 🌐 [LinkedIn](https://linkedin.com/in/yourprofile) | 🐦 [Twitter](https://twitter.com/yourprofile)
 
 ---
 
-## 🚀 Deployment
+## 📝 License
 
-Deploy your own version in just a few clicks using:
-
-- 🌐 [Streamlit Cloud](https://streamlit.io/cloud)
-- 🐳 Docker (optional)
-- 🧑‍💻 GitHub Pages (for docs)
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions from the community! To contribute:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/awesome-feature`
-3. Commit changes: `git commit -m 'Add some feature'`
-4. Push and open a pull request
-
-> 📩 For major contributions, contact us directly via [email](mailto:enochosenwafulah@gmail.com)
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**. See the [`LICENSE`](LICENSE) file for details.
-
----
-
-## 🙋‍♂️ Developer & Contact
-
-**Enock Bereka** – Health Data Scientist | CEO, DataQuest Solutions  
-📧 [enochosenwafulah@gmail.com](mailto:enochosenwafulah@gmail.com)  
-🌐 [DataQuest Solutions](https://your-website-link)  
-📱 [+254701344230](https://wa.me/254701344230)
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-- 🌟 Star the repo
-- 🍴 Fork it
-- 🧠 Share with fellow researchers and med-tech enthusiasts
-- 🤝 Let's collaborate to advance AI in African healthcare
-
----
-
-> “Prevention is better than cure — and prediction is the new prevention.” 🧬
+✨ *If you find this useful, give it a ⭐ on GitHub!*
