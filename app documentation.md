@@ -45,12 +45,14 @@ interactive tool.
 
 ## 📂 Project Structure
 
-Hypertension-Prediction-App/ │── data/ \# Dataset (not included for
-privacy) │── notebooks/ \# Jupyter notebooks for EDA & model training
-│── app.py \# Main Streamlit app │── models/ \# Saved trained models │──
-requirements.txt \# Project dependencies │── README.md \# Documentation
-│── assets/ \# Images/screenshots for README
-
+Hypertension-Prediction-App/
+│── data/ # Dataset (not included for privacy)
+│── notebooks/ # Jupyter notebooks for EDA & model training
+│── app.py # Main Streamlit app
+│── models/ # Saved trained models
+│── requirements.txt # Project dependencies
+│── README.md # Documentation
+│── assets/ # Images/screenshots for README
 ------------------------------------------------------------------------
 
 ## ⚙️ Installation & Setup
