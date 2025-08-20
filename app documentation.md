@@ -164,4 +164,4 @@ This project is licensed under the MIT License. See LICENSE for details.
 👨‍💻 Author: Enoch Bereka\
 📧 Email: enochosenwafulah@gmail.com\
 🌐 GitHub: your-username\
-💼 LinkedIn: your-linkedin
+💼 LinkedIn: https://www.linkedin.com/in/enock-bereka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
