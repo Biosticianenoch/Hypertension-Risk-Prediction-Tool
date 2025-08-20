@@ -88,9 +88,7 @@ pip install -r requirements.txt
 
 Run the app:
 
-``` bash
 https://hypertension-risk-prediction-tool-baacpigkmtafofajanr557.streamlit.app/
-```
 
 ------------------------------------------------------------------------
 
