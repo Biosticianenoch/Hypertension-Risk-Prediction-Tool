@@ -152,6 +152,6 @@ This project is licensed under the MIT License. See LICENSE for details.
 ## 📬 Contact
 
 👨‍💻 Author: Enoch Bereka\
-📧 Email: your-email@example.com\
+📧 Email: enochosenwafulah@gmail.com\
 🌐 GitHub: your-username\
 💼 LinkedIn: your-linkedin
